@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mini Twitter - Feed</title>
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/style.css" />
+<head>
+  <meta charset="UTF-8" />
+  <!-- Define a codificação de caracteres como UTF-8 -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Configura a visualização para dispositivos móveis para melhor responsividade -->
+
+  <title>Mini Twitter - Feed</title>
+  <!-- Define o título da aba do navegador -->
+
+  <link rel="stylesheet" href="css/reset.css" />
+  <!-- Importa um CSS para resetar estilos padrões dos navegadores -->
+
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Importa o CSS principal do projeto para estilização da página -->
+</head>
+
+<body>
+  <!-- Início do corpo da página -->
+
+  <header>
+    <!-- Cabeçalho da página -->
+    <h1>Mini Twitter</h1>
+    <!-- Título principal do site exibido no topo -->
+
+    <nav>
+      <!-- Barra de navegação -->
+      <a href="profile.html">Perfil</a>
+      <!-- Link que leva o usuário à página de perfil -->
+
+      <button id="logout-btn">Sair</button>
+      <!-- Botão que faz logout, limpando o token e redirecionando para login -->
+    </nav>
+  </header>
+
+  <main class="feed-container">
+    <!-- Conteúdo principal do feed, envolvido por uma classe para estilização -->
+
+    <section class="create-post">
+      <!-- Seção responsável por criar novas postagens -->
+
+      <form id="post-form">
+        <!-- Formulário para criação de post -->
+
+        <textarea
+          id="post-content"
+          maxlength="280"
+          placeholder="O que está acontecendo?"
+          required
+        ></textarea>
+        <!-- Campo de texto com limite de 280 caracteres e preenchimento obrigatório -->
+
+        <div class="post-footer">
+          <!-- Rodapé do formulário com contador e botão -->
+
+          <span id="char-count">0 / 280</span>
+          <!-- Exibe o número de caracteres digitados em tempo real -->
+
+          <button type="submit">Publicar</button>
+          <!-- Botão para enviar a postagem -->
+        </div>
+      </form>
+    </section>
+
+    <section id="posts-list" class="posts-list">
+      <!-- Seção onde as postagens serão carregadas dinamicamente via JavaScript -->
+    </section>
+  </main>
+
+  <script type="module" src="js/controllers/feedController.js"></script>
+  <!-- Importa o arquivo JavaScript responsável por controlar a lógica do feed -->
+</body>
+</html>
